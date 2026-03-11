@@ -18,17 +18,10 @@ data = json.load(pokedex)
 
 
 # Add a language choice feature and print the pokemons name based on the user input
-language_finnish = input('Select language')
+language_finnish = input('Select language:\n')
 
 for i in data:
-    if language_finnish == "english":
-        print(data[i]['name']['english'])
-    if language_finnish == 'japanese':
-        print(data[i]['name']['japanese'])
-    if language_finnish == "chinese":
-        print(data[i]['name']['chinese'])
-    if language_finnish == "french":
-        print(data[i]['name']['french'])
+    print(i['name'][language_finnish])
 
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 
