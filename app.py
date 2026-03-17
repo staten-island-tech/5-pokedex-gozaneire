@@ -24,7 +24,7 @@ for i in data:
     print(i['name'][language_finnish])"""
 
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
-type_input = input('Select a pokemon type\n')
+"""type_input = input('Select a pokemon type\n')
 typecount = False
 
 for i in data:
@@ -33,10 +33,19 @@ for i in data:
         typecount = True
 
 if typecount == False:
-    print("No pokemon found for this input")
-
+    print("No pokemon found for this type")"""
 
 # Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
+namefind = False
+nameinput = input("Type characters\n")
+
+for i in data:
+    if nameinput in i["name"]["english"]:
+        print(i['name']['english'])
+        namefind = True
+
+if namefind == False:
+    print("No pokemon was found")
 
 
-
+#Based on user input, show all moves that pokemon  could learn based on type. For example, if Charizard is fire/fyling, show all fire and flying moves.
