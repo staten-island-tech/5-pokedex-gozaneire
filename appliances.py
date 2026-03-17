@@ -36,7 +36,7 @@ if typecount == False:
     print("No pokemon found for this type")"""
 
 # Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
-namefind = False
+"""namefind = False
 nameinput = input("Type characters\n")
 
 for i in data:
@@ -45,7 +45,9 @@ for i in data:
         namefind = True
 
 if namefind == False:
-    print("No pokemon was found")
+    print("No pokemon was found")"""
 
 
-#Based on user input, show all moves that pokemon  could learn based on type. For example, if Charizard is fire/fyling, show all fire and flying moves.
+#Based on user input, show all moves that pokemon could learn based on type. For example, if Charizard is fire/fyling, show all fire and flying moves.
+sort = input("Choose an pokemon")
+
