@@ -25,10 +25,15 @@ for i in data:
 
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 type_input = input('Select a pokemon type\n')
+typecount = False
 
 for i in data:
-    if type_input in i['type']:
-        print(i)
+    if type_input in i["type"]:
+        print(i['name']['english'])
+        typecount = True
+
+if typecount == False:
+    print("No pokemon found for this input")
 
 
 # Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
