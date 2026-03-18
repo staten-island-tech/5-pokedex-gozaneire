@@ -52,6 +52,21 @@ if namefind == False:
 #Based on user input, show all moves that pokemon could learn based on type. For example, if Charizard is fire/fyling, show all fire and flying moves.
 sort = input("Choose an pokemon\n")
 
+normal_type = False
+grass_type = False
+fire_type = False
+water_type = False
+fighting_type = False
+ice_type = False
+flying_type = False
+electric_type = False
+poison_type = False
+bug_type = False
+dark_type = False
+dragon_type = False
+poison_type = False
+fairy_type = False
+
 for i in data:
     if sort in i["name"]["english"]:
         movetype = i['type']
