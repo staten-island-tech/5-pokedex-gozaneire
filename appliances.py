@@ -2,11 +2,12 @@ import json
 
 ## Open the JSON file of pokemon data
 pokedex = open("./pokedex.json", encoding="utf8")
-
+move_pokedex = open("./moves.json", encoding="utf8")
 
 
 ## create variable "data" that represents the enitre pokedex list
 data = json.load(pokedex)
+movedata = json.load(move_pokedex)
 "print(data[0])"
 
 
@@ -49,5 +50,13 @@ if namefind == False:
 
 
 #Based on user input, show all moves that pokemon could learn based on type. For example, if Charizard is fire/fyling, show all fire and flying moves.
-sort = input("Choose an pokemon")
+sort = input("Choose an pokemon\n")
 
+def inspection():
+    for i in data:
+        if sort in i["name"]["english"]:
+            if len(i["type"]) == 1:
+                for sonnypalombohidalgo in movedata:
+                    if i["type"] == sonnypalombohidalgo["type"]:
+                        print(sonnypalombohidalgo["ename"])
+inspection()
