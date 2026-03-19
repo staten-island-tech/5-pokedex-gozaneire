@@ -66,9 +66,13 @@ dark_type = False
 dragon_type = False
 poison_type = False
 fairy_type = False
+steel_type = False
+ghost_type = False
+rock_type = False
+psychic_type = False
 
 for i in data:
-    if sort in i["name"]["english"]:
+    if sort == i["name"]["english"]:
         movetype = i['type']
         for sonnypalombohidalgo in movedata:
             if movetype == sonnypalombohidalgo["type"]:
