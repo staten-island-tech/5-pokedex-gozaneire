@@ -67,3 +67,6 @@ for type in movetype:
     for move in movedata:
         if move["type"] == type:
             print(move["ename"])
+
+
+            fjifeifji
