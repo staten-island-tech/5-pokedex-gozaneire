@@ -53,6 +53,7 @@ if namefind == False:
 sort = input("Choose an pokemon\n")
 
 BLUE = '\033[34m'
+DEFAULT = '\039[40m'
 
 movetype=[]
 for i in data:
@@ -66,7 +67,7 @@ print("Moves:")
 for type in movetype:
     for move in movedata:
         if move["type"] == type:
-            print(move["ename"])
-
-
-            fjifeifji
+            if type == "Water":
+                print(BLUE, move["ename"])
+            else:
+                print(move["ename"])
