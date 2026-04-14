@@ -53,67 +53,17 @@ if namefind == False:
 sort = input("Choose an pokemon\n")
 
 BLUE = '\033[34m'
-normal_type = False
-grass_type = False
-fire_type = False
-water_type = False
-fighting_type = False
-ice_type = False
-flying_type = False
-electric_type = False
-poison_type = False
-bug_type = False
-dark_type = False
-dragon_type = False
-fairy_type = False
-steel_type = False
-ghost_type = False
-rock_type = False
-psychic_type = False
-ground_type = False
 
+movetype=[]
 for i in data:
     if sort == i["name"]["english"]:
-        movetype = i["type"]
-        if "Normal" in movetype:
-            normal_type == True
-        if "Grass" in movetype:
-            grass_type == True
-        if "Fire" in movetype:
-            fire_type == True
-        if "Water" in movetype:
-            water_type == True
-        if "Fighting" in movetype:
-            fighting_type == True
-        if "Ice" in movetype:
-            ice_type == True
-        if "Flying" in movetype:
-            flying_type == True
-        if "Electric" in movetype:
-            electric_type == True
-        if "Poison" in movetype:
-            poison_type == True
-        if "Fairy" in movetype:
-            fairy_type == True
-        if "Bug" in movetype:
-            bug_type == True
-        if "Dark" in movetype:
-            dark_type == True
-        if "Dragon" in movetype:
-            dragon_type == True
-        if "Steel" in movetype:
-            steel_type == True
-        if "Ghost" in movetype:
-            ghost_type == True
-        if "Rock" in movetype:
-            rock_type == True
-        if "Psychic" in movetype:
-            psychic_type == True
-        if "Ground" in movetype:
-            ground_type == True
+        for type in i["type"]:
+            movetype.append(type)
 
 print("\n")
 print("Moves:")
-for sph in movedata:
-    if sph["type"] in movetype:
-        print(sph["ename"])
+
+for type in movetype:
+    for move in movedata:
+        if move["type"] == type:
+            print(move["ename"])
