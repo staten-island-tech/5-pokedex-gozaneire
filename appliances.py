@@ -52,8 +52,13 @@ if namefind == False:
 #Based on user input, show all moves that pokemon could learn based on type. For example, if Charizard is fire/fyling, show all fire and flying moves.
 sort = input("Choose an pokemon\n")
 
-BLUE = '\033[34m'
-DEFAULT = '\039[40m'
+BLUE = '\033[0:34m'
+BOLD = '\033[1;37m'
+RED = "\033[0;31m"
+GREEN = "\033[0;32m"
+PURPLE = "\033[0;35m"
+CYAN = "\033[0;36m"
+DEFAULT = "\033[0;37m"
 
 movetype=[]
 for i in data:
@@ -69,5 +74,15 @@ for type in movetype:
         if move["type"] == type:
             if type == "Water":
                 print(BLUE, move["ename"])
+            elif type == "Normal":
+                print(BOLD, move["ename"])
+            elif type == "Grass":
+                print(GREEN, move["ename"])
+            elif type == "Fire":
+                print(RED, move["ename"])
+            elif type == "Poison":
+                print(PURPLE, move["ename"])
+            elif type == "Ice":
+                print(CYAN, move["ename"])
             else:
-                print(move["ename"])
+                print(DEFAULT, move["ename"])
